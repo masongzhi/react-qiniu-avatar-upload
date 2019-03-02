@@ -48,9 +48,10 @@ class App extends Component {
           </button>
           {this.state.visible && (
             <ReactQiniuAvatarUpload
-              qiniuTokenUrl="blog.masongzhi.cn/api/v1/public/getQiniuToken"
+              qiniuTokenUrl="http://blog.masongzhi.cn/api/v1/public/getQiniuToken"
               off={this.off.bind(this)}
               upload={this.upload.bind(this)}
+              withCredentials={true}
               handleCropUploadSuccess={this.handleCropUploadSuccess.bind(this)}
               handleCropUploadFail={this.handleCropUploadFail.bind(this)}
             />
