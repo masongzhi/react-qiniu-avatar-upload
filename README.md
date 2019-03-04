@@ -15,7 +15,7 @@ A beautiful react component for avatar crop and upload. （react头像剪裁上�
 - 可以读取本地图片并进行剪辑，上传到七牛
 
 ## 示例
-[点我](http://dai-siki.github.io/react-qiniu-avatar-upload/example/demo.html).
+[点我](http://react-qiniu-avatar-upload.masongzhi.cn).
 
 ## 截图
 ![WX20190228-103838@2x.png](https://user-gold-cdn.xitu.io/2019/2/28/16933ae6d78d03c3?w=1240&h=777&f=png&s=195290)
