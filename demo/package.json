@@ -6,7 +6,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-qiniu-avatar-upload": "^1.0.2"
+    "react-qiniu-avatar-upload": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

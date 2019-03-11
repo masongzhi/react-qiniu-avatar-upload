@@ -43,7 +43,7 @@ class ReactQiniuAvatarUpload extends Component {
   };
 
   // 上传图片
-  upload({ createImgUrl, blob, file }) {
+  upload = ({ createImgUrl, blob, file }) => {
     const that = this,
       {
         ki,
@@ -69,10 +69,10 @@ class ReactQiniuAvatarUpload extends Component {
       }
     };
     observable.subscribe(observer); // 上传开始
-  }
+  };
 
   // 获取七牛token
-  getToken() {
+  getToken = () => {
     const that = this,
       { withCredentials, qiniuTokenUrl, qiniuTokenMethod } = that.props;
     let client;
@@ -94,7 +94,7 @@ class ReactQiniuAvatarUpload extends Component {
     };
     client.open(qiniuTokenMethod, qiniuTokenUrl, true);
     client.send();
-  }
+  };
 
   componentDidMount() {
     this.getToken();
@@ -102,11 +102,7 @@ class ReactQiniuAvatarUpload extends Component {
 
   render() {
     return (
-      <ReactImageCrop
-        {...this.props}
-        upload={this.upload.bind(this)}
-        ref={this.cropRef}
-      />
+      <ReactImageCrop {...this.props} upload={this.upload} ref={this.cropRef} />
     );
   }
 }

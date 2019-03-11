@@ -10,54 +10,55 @@ class App extends Component {
     imgUrl: ""
   };
 
-  handleClick() {
+  handleClick = () => {
     this.setState({ visible: true });
-  }
+  };
 
-  off() {
+  off = () => {
     this.setState({ visible: false });
-  }
+  };
 
-  upload({ imgUrl, blob }) {
+  upload = ({ imgUrl, blob }) => {
     console.log("imgUrl===>>>>", imgUrl);
     console.log("blob===>>>>", blob);
-  }
+  };
 
-  handleCropUploadSuccess(res, ki) {
+  handleCropUploadSuccess = (res, ki) => {
     console.log("res ki===>>>>", res, ki);
     this.setState({
       imgUrl: "http://pnii3cub4.bkt.clouddn.com/" + res.key
     });
     this.off();
-  }
+  };
 
-  handleCropUploadFail(err, ki) {
+  handleCropUploadFail = (err, ki) => {
     console.log("err ki===>>>>", err, ki);
-  }
+  };
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <button
-            className="set-upload-btn"
-            onClick={this.handleClick.bind(this)}
-          >
+          <button className="set-upload-btn" onClick={this.handleClick}>
             设置上传
           </button>
           {this.state.visible && (
             <ReactQiniuAvatarUpload
               qiniuTokenUrl="/api/v1/public/getQiniuToken"
-              off={this.off.bind(this)}
-              upload={this.upload.bind(this)}
+              off={this.off}
+              upload={this.upload}
               withCredentials={true}
-              handleCropUploadSuccess={this.handleCropUploadSuccess.bind(this)}
-              handleCropUploadFail={this.handleCropUploadFail.bind(this)}
+              handleCropUploadSuccess={this.handleCropUploadSuccess}
+              handleCropUploadFail={this.handleCropUploadFail}
             />
           )}
           {this.state.imgUrl && (
-            <img style={{marginTop: '10px'}} src={this.state.imgUrl} alt="七牛上传图片" />
+            <img
+              style={{ marginTop: "10px" }}
+              src={this.state.imgUrl}
+              alt="七牛上传图片"
+            />
           )}
         </header>
       </div>

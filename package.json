@@ -1,6 +1,6 @@
 {
   "name": "react-qiniu-avatar-upload",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "react七牛头像上传组件",
   "main": "dist/index.js",
   "repository": "git@github.com:masongzhi/react-qiniu-avatar-upload.git",

@@ -10,6 +10,8 @@ A beautiful react component for avatar crop and upload. （react头像剪裁上�
 [react-image-crop-upload](https://github.com/masongzhi/react-image-crop-upload)
 
 ## 更新日志
+#### @1.0.5
+- 改为箭头函数，函数调用不需要再bind(this)
 
 #### @1.0.0
 - 可以读取本地图片并进行剪辑，上传到七牛
